@@ -1,0 +1,44 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+# zone "proba.hu" {
+#  type master;
+#  file "proba.hu.db";
+#};
+
+#zone "koli.nyf.hu" {
+#  type master;
+#  file "koli.nyf.hu.db";
+#};
+
+#zone "192.168.100.10-gw.proba.hu" {
+#  type master;
+#  file "192.168.100.10-gw.proba.hu.db";
+#};
+
+#zone "192.168.100.10-host10.proba.hu" {
+#  type master;
+#  file "192.168.100.10-host10.proba.hu";
+#};
+
+#zone "campus.nyf.hu" {
+#  type slave;
+#  masters { 10.0.1.10; };
+#  file "campus.nyf.hu.db";
+#};
+
+zone "local.nyf" {
+  type master;
+  file "/etc/bind/db.local.nyf";
+};
+
+zone "10.10.168.10.in-addr.arpa" {
+  type master;
+  file "/etc/bind/db.10.168";
+};
+

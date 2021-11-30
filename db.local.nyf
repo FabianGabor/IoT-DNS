@@ -1,0 +1,15 @@
+$TTL	604800
+@	IN	SOA	ns.nyf. admin.nyf. (
+			     12		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; name server NS records
+		IN	NS	ns.nyf.
+; name server A records
+ns.nyf.		IN	A	10.0.1.10
+
+; hosts A records
+local.nyf.	IN	A	10.168.10.10
